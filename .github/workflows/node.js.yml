@@ -28,7 +28,7 @@ jobs:
         
     - uses: actions/upload-artifact@master
       with:
-          name: webpack artifacts
+    needs: build
           path: public/
     
   test:
@@ -49,4 +49,3 @@ jobs:
         npm test
       env:
         CI: true
-
